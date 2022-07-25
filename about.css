@@ -50,21 +50,8 @@ img {
     height: auto;
 }
 
-.hero {
-    position: relative;
-}
 
-.about-me {
-    position: relative;
-}
 
-.project-me {
-    position: relative;
-}
-
-.projects {
-    position: relative;
-}
 
 
 
@@ -76,15 +63,12 @@ h1 {
 /* MAIN NAVIGATION */
 .header {
 
-    width: 100%;
+
     z-index: 999;
 }
 
 .nav {
     margin-left: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding-top: 4rem;
 }
 
@@ -170,14 +154,15 @@ h1 {
 }
 
 .main-hero-title p {
+    position: relative;
     font-family: 'DM Serif Display', serif;
     color: #242331;
-    text-align: center;
     font-size: 4rem;
     font-weight: bold;
-    width: 40%;
-    margin: 0 auto;
+    max-width: 800px;
+    margin: 30px auto;
 }
+
 
 
 .main-hero-title span {
@@ -203,8 +188,12 @@ h1 {
 
 
 /* Start projects section*/
-.projects {
-    margin-bottom: 20rem;
+.project-title {
+    margin-left: 5em;
+}
+
+.project-p {
+    font-size: 1.6em;
 }
 
 .box-gp {
@@ -270,6 +259,33 @@ h1 {
 
 
 
+/* Skills sections */
+
+
+.skills-title p {
+    font-size: 1.6em;
+}
+
+.skills-list {
+    text-align: center;
+    margin: 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.skills-list p {
+    margin-top: 10px;
+    max-width: 200px;
+    font-size: 1.6rem;
+}
+
+.skills-title {
+
+    margin-left: 5em;
+
+}
+
 
 /* footer */
 .footer-text {
@@ -280,9 +296,7 @@ h1 {
 
 
 @media screen and (max-width:700px) {
-    .main-hero-title p {
-        font-size: 0.8rem;
-    }
+
 
     .text-box p {
         margin-top: 0.8rem;
@@ -337,20 +351,12 @@ h1 {
         flex-direction: column;
     }
 
-    .main-hero-title {
-        padding: 0;
-
-    }
 
     .main-hero-title p {
-        margin-top: 40%;
-
-        font-size: 1.6rem;
+        margin: 30px;
+        font-size: 1.6em;
     }
 
-    .main-hero-title p {
-        margin-top: 10rem;
-    }
 
     .main-hero-img {
         margin: 0 auto;
@@ -401,7 +407,7 @@ h1 {
 
 }
 
-@media screen and (min-width:991px) {
+@media screen and (min-width:700px) {
     .main-hero-title {
         margin-top: 20em;
     }
@@ -417,11 +423,6 @@ h1 {
         margin-left: initial;
     }
 
-    .menu,
-    .nav-list {
-        flex-direction: row;
-        gap: 0;
-    }
 
     .lg-screen-hidden,
     .menu-toggle-icon {
@@ -432,14 +433,12 @@ h1 {
         display: block;
     }
 
+
     .nav-list {
-        display: grid;
-        grid-template-columns: repeat(20, 1fr);
+        display: flex;
+        flex-direction: row;
     }
 
-    .grid-13 {
-        grid-column: 19/20;
-    }
 
     .nav-link {
         font-weight: bold;
@@ -466,10 +465,59 @@ h1 {
     .box {
         margin: 2rem 4rem;
     }
+
+    .project-title {
+        margin: 0;
+    }
+
+    .skills-title {
+        margin: 0;
+    }
+
+    .skills-list {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .skills-list p {
+        max-width: none;
+    }
+
+    .skill {
+        margin-top: 2em;
+    }
 }
 
 
 @media screen and (max-width:400px) {
+
+
+    .project-title {
+        text-align: center;
+        margin-top: 5em;
+    }
+
+    .project-title p {
+        font-size: 1em;
+    }
+
+    .project-title h1 {
+        font-size: 2.2em;
+    }
+
+    .skills-title {
+        text-align: center;
+    }
+
+    .skills-title p {
+        font-size: 1em;
+
+    }
+
+    .skills-title h1 {
+        font-size: 2.2em;
+    }
 
 
     .box {
@@ -512,7 +560,7 @@ h1 {
     .main-hero-title p {
 
         text-align: center;
-        width: 100%;
+
     }
 
     .main-hero-img {
@@ -561,10 +609,6 @@ h1 {
         grid-template-columns: 1fr;
     }
 
-    .main-hero-title {
-        margin: 6em;
-        letter-spacing: 1px;
-    }
 
     .main-hero {
 
@@ -583,7 +627,7 @@ h1 {
     }
 
     .box .view-site {
-        display: inline-block;
+        display: block;
 
         border: 1px solid #fff;
         border-radius: 4px;
@@ -657,16 +701,15 @@ form #email {
     border: none;
     color: #fff;
     background-color: #242331;
-    width: 300px;
-    height: 3em;
-    margin-bottom: 2em;
+    max-width: 50%;
+    margin: 0 auto;
     font-size: 2.2rem;
 }
 
 form #message {
     border-radius: 5px;
-    width: 300px;
-    margin-bottom: 2em;
+    max-width: 50%;
+    margin: 10px auto;
     border: none;
     color: #fff;
     background-color: #242331;
